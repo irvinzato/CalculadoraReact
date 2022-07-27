@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 import './App.css';
 import logoIr from './images/logo-IR.png'
@@ -16,6 +17,11 @@ function App() {
 
   const clearValue = () => {
     setEnteredValue('');
+  }
+
+  const calculateResult = () => {
+                    //Evaluate viene de la libreria "npm install mathjs"
+    setEnteredValue( evaluate( enteredValue ) );
   }
 
   return (
@@ -47,7 +53,7 @@ function App() {
           <Button handleClick={ addValue }> * </Button>
         </div>
         <div className='row'>
-          <Button handleClick={ addValue }> = </Button>
+          <Button handleClick={ calculateResult }> = </Button>
           <Button handleClick={ addValue }> 0 </Button>
           <Button handleClick={ addValue }> . </Button>
           <Button handleClick={ addValue }> / </Button>
