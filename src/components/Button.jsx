@@ -9,7 +9,9 @@ function Button( props ) {
   }
 
   return(
-    <div className={ `button-container ${ isOperator(props.children) ? 'operator' : '' }`.trimEnd() } >
+    <div className={ `button-container ${ isOperator(props.children) ? 'operator' : '' }`.trimEnd() } 
+         onClick={ () => props.handleClick( props.children.trim() ) }>
+          {/* Se usa "() => props.hancleClick( props.children )" por que escribiendo la funcion flecha es una funcion como tal, sin la flecha es un llamado a la funcion que retorna un valor*/}
       { props.children }
     </div>
   );
