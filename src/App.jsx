@@ -13,16 +13,20 @@ function App() {
 
   const addValue = ( val ) => {
     setEnteredValue( enteredValue + val );
-  }
+  };
 
   const clearValue = () => {
     setEnteredValue('');
-  }
+  };
 
   const calculateResult = () => {
                     //Evaluate viene de la libreria "npm install mathjs"
-    setEnteredValue( evaluate( enteredValue ) );
-  }
+    if( enteredValue ) {
+      setEnteredValue( evaluate( enteredValue ) );
+    } else {
+      alert("Debes ingresar valores para realizar calculos");
+    }
+  };
 
   return (
     <div className='App'>
