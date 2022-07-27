@@ -2,6 +2,7 @@ import './App.css';
 import logoIr from './images/logo-IR.png'
 import Button from './components/Button';
 import Pantalla from './components/Pantalla';
+import ButtonClear from './components/ButtonClear';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       </div>
       <div className='calculator-container'>
         <Pantalla 
-         value='2' />
+         value='x' />
         <div className='row'>
           <Button> 1 </Button>
           <Button> 2 </Button>
@@ -39,7 +40,7 @@ function App() {
           <Button> / </Button>
         </div>
         <div className='row'>
-          
+          <ButtonClear> Clear </ButtonClear>
         </div>
       </div>
     </div>
