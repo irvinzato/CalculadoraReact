@@ -9,6 +9,13 @@ function App() {
              src={ logoIr } 
              alt='Logo elegido' />
       </div>
+      <div className='calculator-container'>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
+        <div className='row'></div>
+      </div>
     </div>
   );
 }
