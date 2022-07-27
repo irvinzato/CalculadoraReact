@@ -1,6 +1,7 @@
 import './App.css';
 import logoIr from './images/logo-IR.png'
 import Button from './components/Button';
+import Pantalla from './components/Pantalla';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
              alt='Logo elegido' />
       </div>
       <div className='calculator-container'>
+        <Pantalla 
+         value='2' />
         <div className='row'>
           <Button> 1 </Button>
           <Button> 2 </Button>
